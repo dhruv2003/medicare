@@ -140,3 +140,5 @@ app.*.symbols
 # Firebase
 **/firebase_options.dart
 **/consts/
+**/ios/Runner/GoogleService-Info.plist
+**ios/GoogleService-Info.plist

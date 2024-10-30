@@ -28,19 +28,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   ///list of strings containing onBoarding titles
   final List<String> _titlesList = [
     'Medi-Care',
-    'Firebase Auth',
+    'Easy to use',
     'Facebook Login',
-    'Instaflutter.com',
+    'Step-1 towards a healthier life',
     'Jump straight into the action.',
   ];
 
   /// list of strings containing onBoarding subtitles, the small text under the
   /// title
   final List<String> _subtitlesList = [
-    'Build your on-boarding flow in seconds.',
-    'Use Firebase for user managements.',
+    'Your one stop solution for all your medication alert needs.',
+    'Uses Cloud to manage your medication alerts.',
     'Leverage Facebook to log in user easily.',
-    'Get more awesome templates',
+    'Never miss a dose again.',
     'Get Started'
   ];
 

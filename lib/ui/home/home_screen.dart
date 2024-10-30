@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_login_screen/constants.dart';
 import 'package:flutter_login_screen/model/user.dart';
 import 'package:flutter_login_screen/services/helper.dart';
+import 'package:flutter_login_screen/ui/Profile/profile_screen.dart';
 import 'package:flutter_login_screen/ui/auth/authentication_bloc.dart';
 import 'package:flutter_login_screen/ui/auth/welcome/welcome_screen.dart';
 import 'package:provider/provider.dart';
@@ -43,13 +44,30 @@ class _HomeState extends State<HomeScreen> {
             children: [
               const DrawerHeader(
                 child: Text(
-                  'Drawer Header',
+                  'MEDI-CARE',
                   style: TextStyle(color: Colors.white),
                 ),
                 decoration: BoxDecoration(
                   color: Color(COLOR_PRIMARY),
                 ),
               ),
+
+              // ListTile(
+              //   title: const Text(
+              //     'Profile',
+              //     style: TextStyle(color: Colors.black),
+              //   ),
+              //   leading: const Icon(Icons.person, color: Colors.black),
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //         builder: (context) => ProfileScreen(user: user),
+              //       ),
+              //     );
+              //   },
+              // ),
+              
               ListTile(
                 title: const Text(
                   'Logout',

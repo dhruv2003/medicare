@@ -35,11 +35,17 @@ class FireStoreUtils {
 
   static Future<String> uploadUserImageToServer(
       File image, String userID) async {
-    Reference upload = storage.child("images/$userID.png");
-    UploadTask uploadTask = upload.putFile(image);
-    var downloadUrl =
-        await (await uploadTask.whenComplete(() {})).ref.getDownloadURL();
-    return downloadUrl.toString();
+    try {
+      Reference upload = storage.child("images/$userID.png");
+      UploadTask uploadTask = upload.putFile(image);
+      var downloadUrl =
+          await (await uploadTask.whenComplete(() {})).ref.getDownloadURL();
+      return downloadUrl.toString();
+    } on FirebaseException catch (e) {
+      print('Error uploading image: $e');
+      print("Failed with error '${e.code}': ${e.message}");
+      return 'Error uploading image';
+    }
   }
 
   /// login with email and password with firebase
