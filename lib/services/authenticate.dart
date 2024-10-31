@@ -35,7 +35,7 @@ class FireStoreUtils {
 
   static Future<String> uploadUserImageToServer(
       File image, String userID) async {
-    Reference upload = storage.child("images/$userID.png");
+    Reference upload = storage.child("imagess/$userID.png");
     UploadTask uploadTask = upload.putFile(image);
     var downloadUrl =
         await (await uploadTask.whenComplete(() {})).ref.getDownloadURL();
@@ -197,7 +197,9 @@ class FireStoreUtils {
       }
       return message;
     } catch (e) {
+      print(e);
       return 'Couldn\'t sign up';
+
     }
   }
 

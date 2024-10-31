@@ -140,3 +140,5 @@ app.*.symbols
 # Firebase
 **/firebase_options.dart
 **/consts/
+**/ios/GoogleService-Info.plist
+**/android/app/google-services.json
